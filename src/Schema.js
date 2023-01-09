@@ -19,7 +19,7 @@ export const YouVisitSchema = (props) => {
       },
       tourHeight: {
         title: 'height',
-        default: '300',
+        default: '300px',
         required: true,
       },
     },
