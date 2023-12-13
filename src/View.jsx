@@ -1,12 +1,13 @@
-import React, {useState, useEffect} from 'react';
+import React, { useEffect, useState } from 'react';
 import './theme/block.less';
 
 const View = ({data, isEditMode, className}) => {
   const [value, setValue] = useState('');
-  const Tour = "https://cdn.youvisit.com/tour/Embed/immersiveIcon?v=2022.14.5&ab=&inst=" + data.tourID + "&loc=&pl=v&index=0&debug=&titleshow=&module=&&_sp=undefined&inst=" + data.tourID + "&loc=&pl=v&index=0&debug=&titleshow=&module=&&_sp=undefined&pl=v&uiclass=&hover=1";
+  const Tuor = 'https://cdn.youvisit.com/tour/Embed/immersiveIcon?v=' + data.tourVersion + '&ab=&inst=' + data.tourID + '&loc=&pl=v&index=0&debug=&titleshow=&module=&&_sp=undefined&inst=' + data.tourID + '&loc=&pl=v&index=0&debug=&titleshow=&module=&&_sp=undefined&pl=v&uiclass=&hover=1';
+  const Tour = 'https://cdn.youvisit.com/tour/Embed/immersiveIcon?v=' + data.tourVersion + '&ab=&inst=' + data.tourID + '&loc=&pl=cappex&index=0&debug=&titleshow=&module=&&_sp=undefined&pl=cappex&uiclass=&hover=1';
   useEffect(() => {
     function reloadTour() {
-      const existingScript = document.querySelector('script[src="https://www.youvisit.com/tour/Embed/js2"]');
+      const existingScript = document.querySelector('script[src="https://www.youvisit.com/tour/Embed/js3"]');
       if (existingScript) {
         existingScript.parentNode.removeChild(existingScript);
       }

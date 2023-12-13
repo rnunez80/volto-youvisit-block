@@ -7,7 +7,7 @@ export const YouVisitSchema = (props) => {
       {
         id: 'default',
         title: 'Default',
-        fields: ['tourID', 'tourHeight'],
+        fields: ['tourID', 'tourVersion', 'tourHeight'],
       },
     ],
 
@@ -20,6 +20,11 @@ export const YouVisitSchema = (props) => {
       tourHeight: {
         title: 'height',
         default: '300px',
+        required: true,
+      },
+      tourVersion: {
+        title: 'Tour Version',
+        default: '2023.23.0',
         required: true,
       },
     },
